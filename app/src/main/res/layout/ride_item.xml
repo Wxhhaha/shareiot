@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spacing_8"
+        android:background="@drawable/bg_ride_list"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/spacing_16"
+        android:paddingBottom="@dimen/spacing_16">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_ebike_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LS798342093254"
+                android:textColor="@color/green"
+                android:textSize="@dimen/font_14" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/green" />
+
+            <TextView
+                android:id="@+id/tv_start_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="2012-01-34"
+                android:textColor="@color/green"
+                android:textSize="@dimen/font_14" />
+
+            <TextView
+                android:id="@+id/tv_spend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_8"
+                android:text="0h0min"
+                android:textColor="@color/green"
+                android:textSize="@dimen/font_14" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_8"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/spacing_16"
+            android:paddingRight="@dimen/spacing_16">
+
+            <TextView
+                android:id="@+id/tv_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/tv_spend"
+                android:drawableLeft="@mipmap/ic_pay_cost"
+                android:drawablePadding="@dimen/spacing_8"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/green"
+                android:textSize="@dimen/font_20" />
+
+            <TextView
+                android:id="@+id/tv_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="未支付"
+                android:textColor="@color/red"
+                android:textSize="@dimen/font_16" />
+
+            <TextView
+                android:id="@+id/tv_go_pay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="@dimen/spacing_6"
+                android:background="@drawable/bg_orange_corner"
+                android:gravity="center"
+                android:paddingLeft="@dimen/spacing_16"
+                android:paddingTop="2dp"
+                android:paddingRight="@dimen/spacing_16"
+                android:paddingBottom="2dp"
+                android:text="@string/go_pay"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_16" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

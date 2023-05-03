@@ -1,0 +1,98 @@
+plugins {
+    id 'com.android.application'
+}
+
+def ext = rootProject.ext
+
+android {
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    signingConfigs {
+        debug {
+            storeFile file('E:\\studioworkspace\\2023\\ShareIot-displayconnect\\iot.keystore')
+            storePassword 'android'
+            keyAlias 'testiot'
+            keyPassword '123456'
+        }
+        release {
+            storeFile file('E:\\studioworkspace\\2023\\ShareIot-displayconnect\\iot.keystore')
+            storePassword 'android'
+            keyAlias 'testiot'
+            keyPassword '123456'
+        }
+    }
+    compileSdk 31
+
+    defaultConfig {
+        applicationId "com.wxh.shareiot"
+        minSdk 24
+        targetSdk 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildFeatures {
+        viewBinding true
+        dataBinding true
+    }
+}
+
+dependencies {
+
+    implementation fileTree(include: ['*.jar', '*.aar'], dir: 'libs')
+    implementation "androidx.appcompat:appcompat:${ext.androidx}"
+    implementation "com.google.android.material:material:${ext.material}"
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    implementation "com.google.android.gms:play-services-maps:${ext.maps}"
+    implementation "com.google.android.gms:play-services-location:${ext.location}"
+
+    implementation "com.squareup.retrofit2:retrofit:${ext.retrofit}"
+    implementation "com.squareup.retrofit2:converter-scalars:${ext.converter_scalars}"
+    implementation "com.squareup.retrofit2:converter-gson:${ext.converter_gson}"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:${ext.adapter_rxjava2}"
+    implementation "io.reactivex.rxjava2:rxjava:${ext.rxjava}"
+    implementation "io.reactivex.rxjava2:rxandroid:${ext.rxandroid}"
+
+    implementation "com.blankj:utilcodex:${ext.utilcodex}"//安卓工具类
+    implementation "com.github.ITxiaoguang:MLKitScanner:${ext.scan}"//二维码扫描
+    implementation "com.github.JessYanCoding:AndroidAutoSize:${ext.autosize}"//屏幕适配
+
+    implementation 'com.google.maps.android:android-maps-utils:2.3.0'
+
+    implementation 'com.github.simplepeng:VerCodeLayout:v1.0.1'//验证码输入框
+    //支付宝
+    api 'com.alipay.sdk:alipaysdk-android:+@aar'
+
+    implementation "com.guolindev.permissionx:permissionx:${ext.permission}"
+
+    implementation 'org.java-websocket:Java-WebSocket:1.5.2'//websocket
+
+    implementation 'android.arch.lifecycle:extensions:1.1.1'
+
+    //微信
+    api 'com.tencent.mm.opensdk:wechat-sdk-android:6.8.0'
+    //X5内核webview
+    api 'com.tencent.tbs:tbssdk:44275'
+
+    implementation 'com.mapbox.maps:android:10.11.2'
+}

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="180dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_pink_gradient"
+    android:orientation="vertical"
+    android:elevation="@dimen/spacing_16"
+    android:padding="@dimen/spacing_8">
+
+    <TextView
+        android:layout_marginTop="@dimen/spacing_8"
+        android:id="@+id/tv_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_white_corner"
+        android:padding="@dimen/spacing_8"
+        android:text="LS129898761234123"
+        android:textColor="@color/text_promt"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_marginBottom="@dimen/spacing_8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_8"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:background="@drawable/bg_green_left"
+            android:padding="@dimen/spacing_8"
+            android:text="@string/soc"
+            android:textColor="@color/text_promt" />
+
+        <TextView
+            android:id="@+id/tv_soc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:background="@drawable/bg_white_right"
+            android:gravity="right"
+            android:padding="@dimen/spacing_8"
+            android:text="56%"
+            android:textColor="@color/text_promt" />
+    </LinearLayout>
+</LinearLayout>

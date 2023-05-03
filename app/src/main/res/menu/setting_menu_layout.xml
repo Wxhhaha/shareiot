@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <group
+        android:id="@+id/group1"
+        android:checkableBehavior="single">>
+        <!--        <item-->
+        <!--            android:id="@+id/item1"-->
+        <!--            android:title="@string/ble_test" />-->
+        <!--        <item-->
+        <!--            android:id="@+id/item2"-->
+        <!--            android:title="@string/ebike_config" />-->
+        <item
+            android:id="@+id/item3"
+            android:icon="@mipmap/ic_mytrips"
+            android:title="@string/mytrips" />
+        <item
+            android:id="@+id/item2"
+            android:icon="@mipmap/ic_recharge"
+            android:title="@string/balance" />
+        <item
+            android:id="@+id/item5"
+            android:icon="@mipmap/ic_switch_language"
+            android:title="@string/switch_language" />
+        <item
+            android:id="@+id/item6"
+            android:icon="@mipmap/ic_logout"
+            android:title="@string/logout" />
+        <item
+            android:id="@+id/item4"
+            android:icon="@mipmap/ic_about"
+            android:title="@string/about" />
+    </group>
+
+    <!--    <group-->
+    <!--        android:id="@+id/group2"-->
+    <!--        android:checkableBehavior="single">-->
+    <!--        <item-->
+    <!--            android:id="@+id/subtitle"-->
+    <!--            android:title="@string/setting">-->
+    <!--            <menu>-->
+
+
+    <!--            </menu>-->
+    <!--        </item>-->
+    <!--    </group>-->
+
+</menu>

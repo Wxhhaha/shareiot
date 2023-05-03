@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/spacing_8"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@drawable/dialog_loading_bg">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tv_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@mipmap/ic_unlocking"
+                android:drawablePadding="@dimen/spacing_8"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@string/listview_loading"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_30"
+                android:textStyle="bold" />
+
+            <com.wxh.basiclib.view.AVLoadingIndicatorView
+                android:layout_marginLeft="@dimen/spacing_8"
+                android:layout_alignBottom="@id/tv_msg"
+                android:layout_toRightOf="@id/tv_msg"
+                android:layout_width="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_height="wrap_content"
+                app:indicator="BallPulse" />
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>
